@@ -12,7 +12,7 @@ I created the system to learn about node.js and the express framework.
 ## Database credentials needs to be supplied before using the application
 The system uses a Mysql database. Database credentials need to be supplied inside the '/database/database.class.js' in the 'connect' method
 
-The command to run the system is 'npm run server' which could be found in the 'package.json' file
+#### The command to run the system is 'npm run server' which could be found in the 'package.json' file
 
 Some of the tools used to build the project: 
 * Backend:
