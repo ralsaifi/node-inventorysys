@@ -8,13 +8,13 @@ The system also has a dashboard that shows some statistcs on how many ojects (pr
 I created the system to learn about node.js and the express framework.
 
 Some of the tools used to build the project: 
-+Backend:
-  +Server language: node.js
-  +Framework: express
-  +template enjine: ejs
-+Database: 
-  +MySql
-+Frontend: 
-  +HTML
-  +CSS
+* Backend:
+  * Server language: node.js
+  * Framework: express
+  *template enjine: ejs
+* Database: 
+  * MySql
+* Frontend: 
+  * HTML
+  * CSS
 
