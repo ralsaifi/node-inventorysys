@@ -1,0 +1,49 @@
+<%- include('../parts/header.ejs'); %>
+
+<div class="content-wrap">
+  <div class="meta-info row">
+    <h1 class="content-title">View all proucts</h1>
+    <span class="total"><%= products.length ? products.length : '0' %></span>
+    <a href="/inventory/add" class="button add-item">Add Product</a>
+  </div>
+  <div class="content">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Supplier Price</th>
+          <th>Retail Price</th>
+          <th>QTY IN Stock</th>
+          <th>View</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(products.length){ %>
+          <% products.forEach(product => { %>
+          <tr>
+              <td>#<%= product.Id %></td>
+              <td><%= product.Description; %></td>
+              <td><%= product.category ? product.category : ' '; %></td>
+              <td>$<%= product.SupplierPrice ? product.SupplierPrice : '0'; %></td>
+              <td>$<%= product.RetailPrice ? product.RetailPrice : '0'; %></td>
+              <td><%= product.Quantity ? product.Quantity : '0'; %></td>
+              <td><a href="inventory/view/<%= product.Id; %>" class="action view"><i class="fas fa-eye"></i></a></td>
+              <td><a href="inventory/update/<%= product.Id; %>" class="action update"><i class="fas fa-edit"></i></a></td>
+              <td><a href="inventory/delete/<%= product.Id; %>" class="action remove"><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+        <% }); %>
+        <% } else { %>
+          <tr>
+            <td colspan="8">No products were found</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%- include('../parts/footer.ejs'); %>

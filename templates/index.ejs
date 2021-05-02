@@ -1,0 +1,45 @@
+<%- include('parts/header') %>
+
+<div class="content-wrap">
+  <div class="meta-info row">
+    <h1 class="content-title">Dashboard</h1>
+  </div>
+  <div class="content">
+    <h2>Statistics</h2>
+    <div class="dashbaord">
+      <div class="statistics">
+        <div class="data">
+          <span><%= statistics.total_products; %></span> Products
+        </div>
+        <div class="data">
+          <span><%= statistics.total_staff; %></span> Staff Members
+        </div>
+        <div class="data">
+          <span><%= statistics.total_suppliers; %></span> Suppliers
+        </div>
+      </div>
+      <div class="categories">
+        <div class="category-meta"><span>ID</span><span>Category</span><span>Total products</span></div>
+        <% categories.forEach(category => {%>
+        <div class="category">
+          <span class="id">#<%= category.Id; %></span>
+          <span class="name">
+            <%= category.Description; %>
+          </span>
+          <span class="prod-count">
+            <% if(!category.total_p){ %>
+            No products
+            <% } else if(category.total_p == 1){ %>
+             1 Product
+            <% } else { %>
+            <%= category.total_p; %> Products
+            <% } %>
+          </span>
+        </div>
+        <%  }); %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('parts/footer') %>

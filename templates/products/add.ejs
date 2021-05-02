@@ -1,0 +1,47 @@
+
+<%- include('../parts/header.ejs'); %>
+<div class="content-wrap">
+  <a href="/inventory" class="button back"><i class="fas fa-arrow-left"></i> Back to inventory</a><br ><br >
+  <div class="meta-info row">
+    <h1 class="content-title">Add new proucts</h1>
+  </div>
+  <div class="content">
+    <form action="" method="post">
+      <p>
+        <label for="name">Description: </label>
+        <input type="text" id="name" name="Description" placeholder="Product Name" value="<%= data.product.Description ? data.product.Description : ''; %>">
+        <span class="error"><%= errors.Description ? errors.Description : ''; %></span>
+      </p><br >
+      <p>
+        <label for="qty">Quantity in stock: </label>
+        <input type="text" id="qty" name="Quantity" placeholder="Product quantity" value="<%= data.inventory.Quantity ? data.inventory.Quantity : ''; %>">
+        <span class="error"><%= errors.Quantity ? errors.Quantity : ''; %></span>
+      </p><br >
+      <p>
+        <label for="Category">Category: </label>
+        <input type="text" id="Category" name="Category_id" placeholder="Category" value="<%= data.product.Category_id ? data.product.Category_id : ''; %>">
+        <span class="error"><%= errors.Category_id ? errors.Category_id : ''; %></span><br >
+        <span><b>Note: </b>Use exisiting category id</span>
+      </p><br >
+      <p>
+        <label for="rprice">Retail Price: </label>
+        <input type="text" id="rprice" name="RetailPrice" placeholder="$70.00" value="<%= data.product.RetailPrice ? data.product.RetailPrice : ''; %>">
+        <span class="error"><%= errors.RetailPrice ? errors.RetailPrice : ''; %></span>
+      </p><br >
+      <p>
+        <label for="sprice">Supplier Price: </label>
+        <input type="text" id="sprice" name="SupplierPrice" placeholder="$70.00" value="<%= data.inventory.SupplierPrice ? data.inventory.SupplierPrice : ''; %>">
+        <span class="error"><%= errors.SupplierPrice ? errors.SupplierPrice : ''; %></span>
+      </p><br >
+      <p>
+        <label for="supplier">Supplier: </label>
+        <input type="text" id="supplier" name="Supplier_id" placeholder="7" value="<%= data.product.Supplier_id ? data.product.Supplier_id : ''; %>">
+        <span class="error"><%= errors.Supplier_id ? errors.Supplier_id : ''; %></span><br>
+        <span><b>Note: </b>Use exisiting supplier id</span>
+      </p><br ><br >
+  
+      <input type="submit" value="Add Products">
+    </form>
+  </div>
+</div>
+<%- include('../parts/footer.ejs'); %>

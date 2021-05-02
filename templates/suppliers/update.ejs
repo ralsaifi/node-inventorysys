@@ -1,0 +1,45 @@
+
+<%- include('../parts/header.ejs'); %>
+<div class="content-wrap">
+  <a href="/suppliers" class="button back"><i class="fas fa-arrow-left"></i> Back to Suppliers</a><br ><br >
+  <div class="meta-info row">
+    <h1 class="content-title">Update supplier `<%= suppliers.CompanyName; %>`</h1>
+  </div>
+  <div class="content">
+    <form action="" method="post">
+      <p>
+        <label for="company-name">Company Name: </label>
+        <input type="text" id="company-name" name="CompanyName" placeholder="Company Name" value="<%= suppliers.CompanyName ? suppliers.CompanyName : ''; %>">
+        <span class="error"><%= errors.CompanyName ? errors.CompanyName : ''; %></span>
+      </p><br >
+      <p>
+        <label for="contact-name">Contact Name: </label>
+        <input type="text" id="contact-name" name="ContactName" placeholder="Contact Name" value="<%= suppliers.ContactName ? suppliers.ContactName : ''; %>">
+        <span class="error"><%= errors.ContactName ? errors.ContactName : ''; %></span>
+      </p><br >
+      <p>
+        <label for="address">Address: </label>
+        <input type="text" id="address" name="Address" placeholder="Address" value="<%= suppliers.Address ? suppliers.Address : ''; %>">
+        <span class="error"><%= errors.address ? errors.address : ''; %></span>
+      </p><br >
+      <p>
+        <label for="phone">Phone: </label>
+        <input type="text" id="phone" name="Phone" placeholder="supplier phone number" value="<%= suppliers.Phone ? suppliers.Phone : ''; %>">
+        <span class="error"><%= errors.phone ? errors.phone : ''; %></span>
+      </p><br >
+      <p>
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="Email" placeholder="supplier Email" value="<%= suppliers.Email ? suppliers.Email : ''; %>">
+        <span class="error"><%= errors.email ? errors.email : ''; %></span><br>
+      </p><br >
+      <p>
+        <label for="website">Website: </label>
+        <input type="text" id="website" name="Website" placeholder="supplier Website" value="<%= suppliers.Website ? suppliers.Website : ''; %>">
+        <span class="error"><%= errors.website ? errors.website : ''; %></span>
+      </p><br ><br >
+  
+      <input type="submit" value="Update Supplier">
+    </form>
+  </div>
+</div>
+<%- include('../parts/footer.ejs'); %>

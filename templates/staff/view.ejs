@@ -1,0 +1,25 @@
+<%- include('../parts/header.ejs'); %>
+<div class="content-wrap">
+  <a href="/staff" class="button back"><i class="fas fa-arrow-left"></i> Back to Staff Area</a><br ><br >
+  <div class="meta-info row">
+    <h1 class="content-title">View `<%= staff.Name; %>` staff member</h1>
+  </div>
+  <div class="content">
+    <p>
+      <span>ID: </span><b>#<%= staff.Id ? staff.Id : '0'; %></b>
+    </p><br >
+    <p>
+      <span>Name: </span><b><%= staff.Name; %></b>
+    </p><br >
+    <p>
+      <span>Phone: </span><b><%= staff.Phone; %></b>
+    </p><br >
+    <p>
+      <span>Email: </span><b><%= staff.Email; %></b>
+    </p><br ><br >
+
+    <a href="/staff/delete/<%= staff.Id ? staff.Id  : '0'; %>" class="button">Delete</a>&nbsp;&nbsp;
+    <a href="/staff/update/<%= staff.Id ? staff.Id  : '0'; %>" class="button">Update</a>
+  </div>
+</div>
+<%- include('../parts/footer.ejs'); %>

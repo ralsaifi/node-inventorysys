@@ -1,0 +1,34 @@
+<%- include('../parts/header.ejs'); %>
+<div class="content-wrap">
+  <a href="/inventory" class="button back"><i class="fas fa-arrow-left"></i> Back to inventory</a><br ><br >
+  <div class="meta-info row">
+    <h1 class="content-title">View `<%= data.product.Description; %>` product</h1>
+  </div>
+  <div class="content">
+    <p>
+      <span>ID: </span><b>#<%= data.product.Id ? data.product.Id : '0'; %></b>
+    </p><br >
+    <p>
+      <span>Description: </span><b><%= data.product.Description; %></b>
+    </p><br >
+    <p>
+      <span>Quantity: </span><b><%= data.inventory.Quantity ? data.inventory.Quantity : '0'; %></b>
+    </p><br >
+    <p>
+      <span>Category: </span><b><%= data.category.Description ? data.category.Description : ''; %></b>
+    </p><br >
+    <p>
+      <span>Retail Price: </span><b><%= data.product.RetailPrice ? data.product.RetailPrice : '0'; %></b>
+    </p><br >
+    <p>
+      <span>Supplier Price: </span><b><%= data.inventory.SupplierPrice ? data.inventory.SupplierPrice : '0'; %></b>
+    </p><br >
+    <p>
+      <span>Supplier: </span><b><%= data.supplier.CompanyName ? data.supplier.CompanyName : ''; %></b>
+    </p><br ><br >
+
+    <a href="/inventory/delete/<%= data.product.Id ? data.product.Id : ''; %>" class="button">Delete</a>&nbsp;&nbsp;
+    <a href="/inventory/update/<%= data.product.Id ? data.product.Id : ''; %>" class="button">Update</a>
+  </div>
+</div>
+<%- include('../parts/footer.ejs'); %>

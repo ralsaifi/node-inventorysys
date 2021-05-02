@@ -1,0 +1,30 @@
+
+<%- include('../parts/header.ejs'); %>
+<div class="content-wrap">
+  <a href="/staff" class="button back"><i class="fas fa-arrow-left"></i> Back to Staff Area</a><br ><br >
+  <div class="meta-info row">
+    <h1 class="content-title">Update `<%= staff.Name; %>` staff member</h1>
+  </div>
+  <div class="content">
+    <form action="" method="post">
+      <p>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="Name" placeholder="Staff Name" value="<%= staff.Name ? staff.Name : ''; %>">
+        <span class="error"><%= errors.name ? errors.name : ''; %></span>
+      </p><br >
+      <p>
+        <label for="phone">Phone: </label>
+        <input type="text" id="phone" name="Phone" placeholder="Staff phone number" value="<%= staff.Phone ? staff.Phone : ''; %>">
+        <span class="error"><%= errors.phone ? errors.phone : ''; %></span>
+      </p><br >
+      <p>
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="Email" placeholder="test@example.com" value="<%= staff.Email ? staff.Email : ''; %>">
+        <span class="error"><%= errors.email ? errors.email : ''; %></span><br>
+      </p><br ><br >
+  
+      <input type="submit" value="Update Staff">
+    </form>
+  </div>
+</div>
+<%- include('../parts/footer.ejs'); %>

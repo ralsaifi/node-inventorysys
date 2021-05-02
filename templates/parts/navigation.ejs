@@ -1,0 +1,26 @@
+<ul class="menu">
+  <li>
+    <a href="/" class="<%= typeof homepage != 'undefined' ? 'active' : ''; %>">
+      <div class="icon"><i class="fas fa-home"></i></div>
+      <div><span>Dashboard</span></div>
+    </a>
+  </li>
+  <li>
+    <a href="/inventory" class="<%= typeof data != 'undefined' || typeof products != 'undefined' || typeof product != 'undefined' ? 'active' : ''; %>">
+      <div class="icon"><i class="fas fa-list-alt"></i></div>
+      <div><span>Inventory</span></div>
+    </a>
+  </li>
+  <li>
+    <a href="/staff" class="<%= typeof staff != 'undefined' ? 'active' : ''; %>">
+      <div class="icon"><i class="fas fa-user-friends"></i></div>
+      <div><span>Staff</span></div>
+    </a>
+  </li>
+  <li>
+    <a href="/suppliers" class="<%= typeof suppliers != 'undefined' ? 'active' : ''; %>">
+      <div class="icon"><i class="fas fa-shapes"></i></div>
+      <div><span>Suppliers</span></div>
+    </a>
+  </li>
+</ul>

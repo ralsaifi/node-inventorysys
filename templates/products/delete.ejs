@@ -1,0 +1,14 @@
+<%- include('../parts/header.ejs'); %>
+<div class="content-wrap">
+  <a href="/inventory" class="button back"><i class="fas fa-arrow-left"></i> Back to inventory</a><br ><br >
+  <div class="meta-info row">
+    <h1 class="content-title">Delete a productt '<%= product.Description; %>'</h1>
+  </div>
+  <div class="content">
+    <form action="<%= product.Id; %>" method="post">
+      <p>Are you sure you want to delete '<b><%= product.Description; %></b>' product</p><br >
+      <input type="submit" value="Confirm">
+    </form>
+  </div>
+</div>
+<%- include('../parts/footer.ejs'); %>
