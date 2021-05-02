@@ -10,7 +10,7 @@ Though the project is uploaded to github on 02/05/2021, the project started as a
 I created the system to learn about node.js and the express framework.
 
 ## Database credentials needs to be supplied before using the application
-The system uses a Mysql database, database credentials need to be supplied inside the '/database/database.class.js' in the 'connect' method
+The system uses a Mysql database. Database credentials need to be supplied inside the '/database/database.class.js' in the 'connect' method
 
 
 Some of the tools used to build the project: 
