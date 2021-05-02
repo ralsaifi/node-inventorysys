@@ -1,22 +1,20 @@
-# A_team
+#### node-inventorysys
 
-Clone Repo to local destination, easier if you do it via GitHub Desktop
+This simple node.js project was created for learning porpuses. 
+It is a simple inventory system. Users can do all necessarry actions (create, read, update, delete) products, staff, and supplies. 
+The system also has a dashboard that shows some statistcs on how many ojects (products, staff, etc) there are, and, the products categories and how many products in each category. 
 
-npm install express
+## They system should not be used in the real world!
+I created the system to learn about node.js and the express framework.
 
-node server
-
-open browser to 'localhost:3000'
-
----
-
-To install all package needed, run 'npm install' in the command line
-The modules include a module 'nodemon' for live preview of the site, to use nodemon,
-run 'npm run server' in the command line
-Nodemon is configured to run server.js file and it will monitor any changes to that file
-
-Index Page -> Front End
-Inventory Page -> Front End
-Order Pahe -> Front End
-PurchaseOrders -> Front End
+Some of the tools used to build the project: 
++Backend:
+  +Server language: node.js
+  +Framework: express
+  +template enjine: ejs
++Database: 
+  +MySql
++Frontend: 
+  +HTML
+  +CSS
 
