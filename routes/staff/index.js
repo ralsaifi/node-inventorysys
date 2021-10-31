@@ -10,7 +10,7 @@ const database = require('../../database/database.class');
 
 /** Serve staff page *******************************************/
 router.get('/', (req, res) => {
-  database.selectAll({table: 'Staff', callbackFunc(err, staff){
+  database.selectAll({table: 'staff', callbackFunc(err, staff){
     if(err) throw err;
     res.status(200);
     res.render('staff/index.ejs', {staff});
